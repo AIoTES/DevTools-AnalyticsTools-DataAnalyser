@@ -1,0 +1,153 @@
+1. General operation
+================================================================================
+
+Data loading
+---------------------------------
+
+To load a local file, browse a file from the panel at the left side and click
+"Upload".
+
+
+Raw data table
+---------------------------------
+
+Once a file is loaded, the loaded data are presented in a table. The table is 
+paginated. You can view more pages from the navigation buttons at the bottom.
+The rows can be sorted according to the values of a specific column by clicking
+on the name of the column.
+
+You can specify how many rows to show per page from the select box at the 
+top-left of the table. The default is 10 rows per page.
+
+You can search for a specific value in the table by writing the value, or part
+of it, in the search box at the top right of the table. As soon as you begin 
+typing, the table is filtered accordingly.
+
+
+Data analytics method selection
+---------------------------------
+
+Once a data file has been loaded, the "Select analysis" panel is shown at the
+right side of the screen. It displays the categories of data analytics methods
+supported.
+
+In each category, a select box allows the user to select a specific method from
+the corresponding category.
+
+
+Data analytics method configuration and running
+---------------------------------
+
+Once a data analytics method is selected from one of the categories, the
+method's configuration panel is presented to the right. Each method has its own
+parameters that the user needs to specify before calling the method.
+
+Once the parameters are set, the user can click on the "Run" button
+in order to run the method and view the results.
+
+
+Data analytics results table
+---------------------------------
+
+After the user runs a data analytics method, the results appear in a table
+below the raw data table. The user can navigate in this table in a similar
+manner as in the raw data table.
+
+
+Export data analytics results
+---------------------------------
+
+After the user runs a data analytics method, he/she can export the results to
+a file in a specified format.
+
+At the right side of the screen, below the method parameters, there is the 
+"Export results" area. The user must select one of three currently supported 
+formats:
+- CSV
+- JSON
+- NVD3 JSON
+
+The NVD3 JSON format is JSON with a bit modified structure, in order to be
+readily used in visualizations using the NVD3 library.
+
+After the user selects an output format, he/she can click on the "Export
+results" button to download the data. The data are downloaded to a file named
+"results", with an extension dependent on the selected format.
+
+
+
+2. Demo scenarios
+================================================================================
+
+k-means clustering
+---------------------------------
+
+- Load the "xy_data.json" file. The raw data contain rows of x and y values.
+- From the "Clustering" category, select the "k-means" method.
+- In the k-means options panel, specify the following parameters:
+    * Attributes to use: Both the "x" and "y" attributes 
+      (Ctrl + click for multiple selection).
+	* Number of clusters: 3
+- Click "Run".
+- The results are presented in the "Analytics results" area under the raw data.
+  The output table is similar to the raw data, with the addition of the 
+  "clusterLabel" column, which is the label of the cluster in which each row
+  belongs. The cluster labels range from 0 to the number of clusters selected
+  minus 1. By viewing more pages of the results, you can see which rows belong
+  to which clusters.
+- Change the number of clusters from 3 to 2 and click "Run" again.
+- The results table is updated. Now the data are split in two clusters.
+
+
+Local Outlier Factor anomaly detection
+---------------------------------
+
+- Load the "xy_data.json" file. The raw data contain rows of x and y values.
+- From the "Anomaly detection" category, select the "LOF" method.
+- In the LOF options panel, specify the following parameters:
+    * Attributes to use: Both the "x" and "y" attributes 
+      (Ctrl + click for multiple selection).
+	* Number of neighbors: 3
+- Click "Run".
+- The results are presented in the "Analytics results" area under the raw data.
+  The output table is similar to the raw data, with the addition of the 
+  "anomalyScore" and "anomalyLabel" columns. The anomaly score is a number 
+  showing how much outlier a specific row is. The larger the anomaly score, the
+  more outlier a row is considered. The anomaly label is a qualitative 
+  assessment of each row as "Regular" or "Outlier", based on the anomaly score
+  and a pre-defined threshold. By viewing more pages of the results, you can 
+  see more rows of the results.
+
+
+Histogram feature extraction
+---------------------------------
+
+- Load the "activity_data.json" file. The raw data contain rows of 
+  activity-related data (which room the user was at at a specific time).
+- From the "Feature extraction" category, select the "Histogram" method.
+- In the histogram options panel, specify the following parameters:
+    * Each entity is a: userID
+	* Compute histogram based on: room
+- Click "Run".
+- The results are presented in the "Analytics results" area under the raw data.
+  Each row of the results corresponds to a userID (the entity of interest).
+  For each user, a histogram is computed, based on the values of the "room"
+  attribute for this user. The histogram for a user shows which the frequency
+  of visits of the user in each of the rooms. Such features can be used e.g.
+  for computing behavioural similarities among users.
+
+
+Summary statistics
+---------------------------------
+
+- Load the "luminance_data.json" file. The raw data contain values of luminance
+  at specific timestamps.
+- From the "Feature extraction" category, select the "Summarization" method.
+- In the summarization options panel, specify the following parameters:
+    * Attribute: value
+- Click "Run".
+- The results are presented in the "Analytics results" area under the raw data.
+  There is only one row, containing several summary statistics for the selected
+  column (the attribute).
+
+

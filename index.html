@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Data analyser</title>
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+	<link rel="stylesheet" href="https:////cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	
+	<script src="js/d3.v5.min.js"></script>
+	<script src="js/script.js"></script>
+
+	<script src="js/services/summary.js"></script>
+	<script src="js/services/lof.js"></script>
+	<script src="js/services/kmeans.js"></script>
+	
+	<style>
+		.logo {
+			height: 60px;
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="w3-container w3-teal w3-top">
+		<h1>Data analyser</h1>
+	</header>
+	
+	<div id="data_analyzer" class="w3-animate-opacity w3-cell-row" style="margin-top: 70px; margin-bottom: 70px;">
+		<div class="w3-container w3-display-container w3-padding-16 w3-cell">
+			<div class="w3-sidebar w3-light-grey w3-bar-block" style="width: 260px;">
+				<div class="w3-container">
+					<h3>Load data</h3>
+					<p><label>Upload a file</label></p>
+					<p><input type="file" name="fileToUpload" id="fileToUpload"></p>
+					<p>
+						<button id="uploadFileBtn" class="w3-button w3-block w3-green w3-left-align" onclick="uploadFile()">
+							<i class="fa fa-upload w3-margin-right"></i>
+							Upload
+							<i id="spinner" class="fa fa-spinner w3-margin-left w3-spin" style="visibility: hidden"></i>
+						</button>
+					</p>
+					<hr>
+					<p>Or</p>
+					<hr>
+					<p><label>Submit a query to the Data Lake</label></p>
+					<p><textarea name="myQuery" class="w3-input w3-border" placeholder="Type your query here." style="resize: none;"></textarea></p>
+					<p><button class="w3-button w3-block w3-green w3-left-align">
+						<i class="fa fa-database w3-margin-right"></i>
+						Submit
+					</button></p>
+				</div>
+			</div>
+			<div style="margin-left: 260px;">
+				<div class="w3-container w3-padding-16" id="rawDataDiv" style="visibility: hidden;">
+					<h3>Raw data</h3>
+					<table id="dataTable" class="display" width="100%"></table>
+					<!-- <div id="example1"></div> -->
+					<!-- <button id="export-file-csv" class="intext-btn w3-button w3-green w3-left-align">Export CSV</button> -->
+					<!-- <button id="export-file-json" class="intext-btn w3-button w3-green w3-left-align">Export JSON</button> -->
+				</div>
+				<div class="w3-container w3-padding-16" id="analyticsResultsDiv" style="visibility: hidden;">
+					<h3>Analytics results</h3>
+					<table id="outputTable" class="display" width="100%"></table>
+				</div>
+			</div>
+		</div>
+		<div class="w3-container w3-display-container w3-padding-16 w3-cell">
+			<div class="w3-sidebar w3-light-grey w3-bar-block" id="analysisTypeDiv" style="width: 260px; height: 70%; visibility: hidden;">
+				<div class="w3-container">
+					<h3>Select analysis</h3>
+					<p><label>Feature extraction</label></p>
+					<p>
+						<select id="featureExtractionSelect" class="w3-select w3-border" onchange="featureExtractionSelected()">
+							<option value="" disabled selected>Choose method</option>
+							<option value="summarization">Summarization</option>
+							<option value="histogram">Histogram</option>
+							<option value="pca">PCA</option>
+							<option value="neural">Neural network-based</option>
+						</select>
+					</p>
+					<p><label>Feature selection</label></p>
+					<p>
+						<select id="featureSelectionSelect" class="w3-select w3-border" onchange="featureSelectionSelected()">
+							<option value="" disabled selected>Choose method</option>
+							<option value="filter">Filter method</option>
+							<option value="wrapper">Wrapper method</option>
+						</select>
+					</p>
+					<p><label>Anomaly detection</label></p>
+					<p>
+						<select id="anomalyDetectionSelect" class="w3-select w3-border" onchange="anomalyDetectionSelected()">
+							<option value="" disabled selected>Choose method</option>
+							<option value="cusum">CUSUM</option>
+							<option value="lof">LOF</option>
+							<option value="extendedLof">Extended LOF</option>
+							<option value="brpca">BRPCA</option>
+							<option value="weightedCentroid">Weighted range-based centroid</option>
+						</select>
+					</p>
+					<p><label>Probabilistic prediction models</label></p>
+					<p>
+						<select id="probabilisticPredictionSelect" class="w3-select w3-border" onchange="probabilisticPredictionSelected()">
+							<option value="" disabled selected>Choose method</option>
+							<option value="hmm">HMM</option>
+						</select>
+					</p>
+					<p><label>Time series prediction</label></p>
+					<p>
+						<select id="timeseriesPredictionSelect" class="w3-select w3-border" onchange="timeseriesPredictionSelected()">
+							<option value="" disabled selected>Choose method</option>
+							<option value="arima">ARIMA</option>
+							<option value="lagStarima">Lag-STARIMA</option>
+						</select>
+					</p>
+					<p><label>Clustering</label></p>
+					<p>
+						<select id="clusteringSelect" class="w3-select w3-border" onchange="clusteringSelected()">
+							<option value="" disabled selected>Choose method</option>
+							<option value="kmeans">k-means</option>
+							<option value="dbscan">dbscan</option>
+							<option value="hierarchical">hierarchical</option>
+						</select>
+					</p>
+					<p><label>Hypothesis testing</label></p>
+					<p>
+						<select id="hypothesisTestingSelect" class="w3-select w3-border" onchange="hypothesisTestingSelected()">
+							<option value="" disabled selected>Choose method</option>
+							<option value="tTest">t-test</option>
+						</select>
+					</p>
+				</div>
+			</div>
+			<div style="margin-left: 260px;">
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="summarization" style="display: none">
+					<div class="w3-sidebar w3-light-grey w3-bar-block" style="width: 260px;">
+						<div class="w3-container">
+							<h4>Summarization options</h4>
+							<p><label>Attribute</label></p>
+							<p><select id="summarizationAttrSelect" class="w3-select w3-border"></select></p>
+							<p>
+								<button id="generateSummarizationBtn" class="w3-button w3-block w3-green w3-left-align" onclick="generateSummarization()">
+									Run
+								</button>
+							</p>
+							<p><label>Export results</label></p>
+							<p>
+								<select id="exportFormatSelect_summarization" class="w3-select w3-border">
+									<option value="" disabled selected>Choose export format</option>
+									<option value="csv">CSV</option>
+									<option value="json">JSON</option>
+									<option value="nvd3_json">NVD3 JSON</option>
+								</select>
+							</p>
+							<p>
+								<button id="exportResultsBtn" class="w3-button w3-block w3-green w3-left-align" onclick="exportResults('exportFormatSelect_summarization')">
+									Export results
+								</button>
+							</p>
+						</div>
+					</div>
+					<div style="margin-left: 260px;"></div>
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="histogram" style="display: none">
+					<div class="w3-sidebar w3-light-grey w3-bar-block" style="width: 260px;">
+						<div class="w3-container">
+							<h4>Histogram options</h4>
+							<p><label>Each entity is a</label></p>
+							<p><select id="histogramEntitySelect" class="w3-select w3-border"></select></p>
+							<p><label>Compute histogram based on</label></p>
+							<p><select id="histogramAttributeSelect" class="w3-select w3-border"></select></p>
+							<p>
+								<button id="generateHistogramsBtn" class="w3-button w3-block w3-green w3-left-align" onclick="generateHistograms()">
+									Run
+								</button>
+							</p>
+							<p><label>Export results</label></p>
+							<p>
+								<select id="exportFormatSelect_histogram" class="w3-select w3-border">
+									<option value="" disabled selected>Choose export format</option>
+									<option value="csv">CSV</option>
+									<option value="json">JSON</option>
+									<option value="nvd3_json">NVD3 JSON</option>
+								</select>
+							</p>
+							<p>
+								<button id="exportResultsBtn" class="w3-button w3-block w3-green w3-left-align" onclick="exportResults('exportFormatSelect_histogram')">
+									Export results
+								</button>
+							</p>
+						</div>
+					</div>
+					<div style="margin-left: 260px;">
+						<!-- <div class="w3-container w3-padding-16"> -->
+							<!-- <table id="histogramsTable" class="display" width="100%"></table> -->
+						<!-- </div> -->
+					</div>
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="pca" style="display: none">
+					PCA
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="neural" style="display: none">
+					Neural network-based
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="filter" style="display: none">
+					Filter method
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="wrapper" style="display: none">
+					Wrapper method
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="cusum" style="display: none">
+					CUSUM
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="lof" style="display: none">
+					<div class="w3-sidebar w3-light-grey w3-bar-block" style="width: 260px;">
+						<div class="w3-container">
+							<h4>LOF options</h4>
+							<p><label>Attributes to use</label></p>
+							<p><select id="lofAttrSelect" class="w3-select w3-border" multiple></select></p>
+							<p><label>Number of neighbors</label></p>
+							<p><input type="text" id="lofNneighText" class="w3-select w3-border"></select></p>
+							<p>
+								<button id="generateLofBtn" class="w3-button w3-block w3-green w3-left-align" onclick="generateLof()">
+									Run
+									<i id="lofSpinner" class="fa fa-spinner w3-margin-left w3-spin" style="visibility: hidden"></i>
+								</button>
+							</p>
+							<p><label>Export results</label></p>
+							<p>
+								<select id="exportFormatSelect_lof" class="w3-select w3-border">
+									<option value="" disabled selected>Choose export format</option>
+									<option value="csv">CSV</option>
+									<option value="json">JSON</option>
+									<option value="nvd3_json">NVD3 JSON</option>
+								</select>
+							</p>
+							<p>
+								<button id="exportResultsBtn" class="w3-button w3-block w3-green w3-left-align" onclick="exportResults('exportFormatSelect_lof')">
+									Export results
+								</button>
+							</p>
+						</div>
+					</div>
+					<div style="margin-left: 260px;"></div>
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="extendedLof" style="display: none">
+					Extended LOF
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="brpca" style="display: none">
+					BRPCA
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="weightedCentroid" style="display: none">
+					Weighted range-based centroid
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="hmm" style="display: none">
+					HMM
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="arima" style="display: none">
+					ARIMA
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="lagStarima" style="display: none">
+					Lag-STARIMA
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="kmeans" style="display: none">
+					<div class="w3-sidebar w3-light-grey w3-bar-block" style="width: 260px">
+						<div class="w3-container">
+							<h4>K-means options</h4>
+							<p><label>Attributes to use</label></p>
+							<p><select id="kmeansAttrSelect" class="w3-select w3-border" multiple></select></p>
+							<p><label>Number of clusters</label></p>
+							<p><select id="kmeansNclustersSelect" class="w3-select w3-border"></select></p>
+							<p>
+								<button id="generateKmeansBtn" class="w3-button w3-block w3-green w3-left-align" onclick="generateKmeans()">
+									Run
+								</button>
+							</p>
+							<p><label>Export results</label></p>
+							<p>
+								<select id="exportFormatSelect_kmeans" class="w3-select w3-border">
+									<option value="" disabled selected>Choose export format</option>
+									<option value="csv">CSV</option>
+									<option value="json">JSON</option>
+									<option value="nvd3_json">NVD3 JSON</option>
+								</select>
+							</p>
+							<p>
+								<button id="exportResultsBtn" class="w3-button w3-block w3-green w3-left-align" onclick="exportResults('exportFormatSelect_kmeans')">
+									Export results
+								</button>
+							</p>
+						</div>
+					</div>
+					<div style="margin-left: 260px;"></div>
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="dbscan" style="display: none">
+					DBSCAN
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="hierarchical" style="display: none">
+					Hierarchical
+				</div>
+				<div class="analysis w3-container w3-display-container w3-padding-16" id="tTest" style="display: none">
+					t-test
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<footer class="w3-container w3-white w3-bottom">
+		<img class="logo" src="img/activage-logo.png" alt="ACTIVAGE project logo">
+	</footer>
+	
+	<script>		
+		function openAnalysis(name) {
+			var analyses = document.getElementsByClassName("analysis");
+			for (var i = 0; i < analyses.length; i++) {
+				analyses[i].style.display = "none";
+			}
+			document.getElementById(name).style.display = "block";
+		}
+
+		function closeAllAnalyses() {
+			var analyses = document.getElementsByClassName("analysis");
+			for (var i = 0; i < analyses.length; i++) {
+				analyses[i].style.display = "none";
+			}
+		}
+
+		function resetSelectBoxes() {
+			document.getElementById("featureExtractionSelect").selectedIndex = 0
+			document.getElementById("featureSelectionSelect").selectedIndex = 0
+			document.getElementById("anomalyDetectionSelect").selectedIndex = 0
+			document.getElementById("probabilisticPredictionSelect").selectedIndex = 0
+			document.getElementById("timeseriesPredictionSelect").selectedIndex = 0
+			document.getElementById("clusteringSelect").selectedIndex = 0
+			document.getElementById("hypothesisTestingSelect").selectedIndex = 0
+		}
+	</script>
+</body>
+
+</html>
