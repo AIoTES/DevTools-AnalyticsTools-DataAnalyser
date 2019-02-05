@@ -1,0 +1,63 @@
+{
+    "inputSchema": {
+        "title": "Line chart input",
+        "description": "The input to the line chart service.",
+        "type": "object",
+        "properties": {
+            "data": {
+                "type": "array",
+                "description": "The data to plot, as an array of JSON objects.",
+                "items": {
+                    "type": "object",
+                    "description": "An input data record.",
+                    "properties": {}
+                }
+            },
+            "options": {
+                "type": "object",
+                "description": "Service options.",
+                "properties": {
+                    "xAttr": {
+                        "type": "string",
+                        "description": "The name of the data attribute to use for the horizontal axis."
+                    },
+                    "yAttr": {
+                        "type": "string",
+                        "description": "The name of the data attribute to use for the vertical axis."
+                    },
+                    "width": {
+                        "type": "integer",
+                        "description": "The width of the chart in pixels."
+                    },
+                    "height": {
+                        "type": "integer",
+                        "description": "The height of the chart in pixels."
+                    },
+                    "color": {
+                        "type": "string",
+                        "description": "The color of the lines in the line chart, as an SVG color name or a #xxxxxx value."
+                    }
+                },
+                "required": ["xAttr", "yAttr", "width", "height", "color"]
+            }
+        },
+        "required": ["data", "options"]
+    },
+    "inputExample": {
+        "data": [
+            {"year": 1990, "value": 4},
+            {"year": 2000, "value": 2},
+            {"year": 2010, "value": 3},
+            {"year": 2020, "value": 1}
+        ],
+        "options": {
+            "xAttr": "year",
+            "yAttr": "value",
+            "width": 500,
+            "height": 350,
+            "color": "steelblue"
+        }
+    },
+    "outputSchema": {},
+    "outputExample": []
+}

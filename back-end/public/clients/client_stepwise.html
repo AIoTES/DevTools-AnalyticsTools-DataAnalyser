@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
+		<script src="https://vega.github.io/vega/vega.min.js"></script>
+		<style>
+			.area30 {
+				width: 30%;
+				padding: 10px;
+				float: left;
+			}
+			.area60 {
+				width: 60%;
+				padding: 10px;
+				float: left;
+			}
+			.editor {
+				height: 720px;
+				width: 100%;
+			}
+
+			.view {
+				float: left;
+				padding: 5px;
+			}
+			.viewTitle {
+				font-family: Arial;
+			}
+			.viewBody {
+				width: 450px;
+				height: 320px;
+			}
+
+			.viewJSONArea {
+				width: 420px;
+				height: 320px;
+				float: left;
+			}
+			.viewJSONEditor {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	
+	<body>
+
+		<div id="dashboard">
+			<div id="analysisArea" class="area30">
+				<h2>Dashboard description</h2>
+				<div id="dashboardEditor" class="editor"></div>
+				<div><button onclick="createDashboard()">Create dashboard</button></div>
+			</div>
+			<div id="viewsArea" class="area60"></div>
+		</div>
+		
+		<script>
+
+			var dashboardEditor = ace.edit("dashboardEditor");
+			dashboardEditor.setTheme("ace/theme/dawn");
+			dashboardEditor.session.setMode("ace/mode/json");
+
+			function createDashboard() {
+                var viewsContainer = document.getElementById("viewsArea");
+                viewsContainer.innerHTML = "";
+
+                var dashboardDesc = JSON.parse(dashboardEditor.getValue());
+                
+                dashboardDesc.views.forEach(view => {
+                    createView(dashboardDesc, view.id);
+                });
+            }
+            
+            function createView(dashboardDesc, viewID) {                
+                var viewsContainer = document.getElementById("viewsArea");
+
+                var viewContainer = document.createElement("div");
+                viewContainer.setAttribute("class", "view");
+                viewContainer.setAttribute("id", viewID);
+                viewsContainer.appendChild(viewContainer);
+
+                updateView(dashboardDesc, viewID);
+            }
+
+            function updateView(dashboardDesc, viewID) {
+                var view = dashboardDesc.views.find(d => d.id == viewID);
+                var step = dashboardDesc.analysis.find(d => d.id == view.stepID);
+
+                var viewContainer = document.getElementById(viewID);
+                viewContainer.innerHTML = "";
+
+                var viewTitle = document.createElement("h3");
+                viewTitle.innerHTML = view.title;
+                viewTitle.setAttribute("class", "viewTitle");
+                viewContainer.appendChild(viewTitle);
+
+                var viewBody = document.createElement("div");
+                viewBody.setAttribute("class", "viewBody");
+                viewBody.setAttribute("id", viewID + "_body");
+                viewContainer.appendChild(viewBody);
+                
+                fetch("http://localhost:8081/step/" + step.id, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json; charset=utf-8",
+						"Access-Control-Allow-Origin": "*"
+					},
+					body: JSON.stringify(dashboardDesc.analysis),
+				})
+				.then(res => res.json())
+				.then(analysisResult => {
+                    dashboardDesc.analysis = analysisResult;
+                    updateViewFuns[view.type](viewID + "_body", dashboardDesc, viewID);
+                });
+                
+                // updateViewFuns[view.type](viewID + "_body", dashboardDesc, viewID);
+            }
+
+            var updateViewFuns = {
+                json: updateViewJSON,
+                vega: updateViewVega
+            }
+
+            function updateViewJSON(viewBodyID, dashboardDesc, viewID) {                
+                console.log(viewBodyID, dashboardDesc, viewID);
+                var view = dashboardDesc.views.find(d => d.id == viewID);
+                var step = dashboardDesc.analysis.find(d => d.id == view.stepID);
+
+                var viewBody = document.getElementById(viewBodyID);
+                viewBody.innerHTML = "";
+                
+                var editorDiv = document.createElement("div");
+                editorDiv.setAttribute("id", viewBodyID + "_editor");
+                editorDiv.setAttribute("class", "viewJSONEditor");
+                viewBody.appendChild(editorDiv);
+
+                var editor = ace.edit(viewBodyID + "_editor");
+                editor.setTheme("ace/theme/dawn");
+                editor.session.setMode("ace/mode/json");
+                editor.setValue(JSON.stringify(step.output, null, 4), -1);
+            }
+
+            // var vegaViews = {};
+
+            function updateViewVega(viewBodyID, dashboardDesc, viewID) {                
+                var view = dashboardDesc.views.find(d => d.id == viewID);
+                var step = dashboardDesc.analysis.find(d => d.id == view.stepID);
+
+                if (step.output != null) {
+                    // var viewVega = vegaViews[viewID];
+                    // if (!viewVega) {
+                    //     viewVega = new vega.View(vega.parse(step.output))
+                    //         .renderer('canvas')
+                    //         .initialize("#" + viewBodyID)
+                    //         .hover()
+                    //         .run();
+                    //     vegaViews[viewID] = viewVega;
+                    // }
+                    // else {
+                    //     console.log("before");
+                    //     console.log(viewVega.data('table'));
+                    //     viewVega.change('table', vega.changeset().remove(d => true).insert(step.output.data[0].values)).run();
+                    //     console.log("after");
+                    //     console.log(viewVega.data('table'));
+                    // }
+
+                    viewVega = new vega.View(vega.parse(step.output))
+                        .renderer('canvas')
+                        .initialize("#" + viewBodyID)
+                        .hover()
+                        .run();
+
+                    var rangeXSignal = step.output.signals.find(d => d.name == "rangeX");
+                    if (rangeXSignal) {
+                        viewVega.addSignalListener("rangeX", (name, value) => {
+                            let linkedStepID = "filtered";
+
+                            if (value[0] > value[1]) {
+                                let tmp = value[0];
+                                value[0] = value[1];
+                                value[1] = tmp;
+                            }
+
+                            if (value[0] == value[1]) {
+                                value[0] = null;
+                                value[1] = null;
+                            }
+
+                            let currentAnalysis = dashboardDesc.analysis;
+                            let linkedStep = currentAnalysis.find(d => d.id == linkedStepID);
+                            let filterIdx = linkedStep.input.options.range.findIndex(d => d.attribute == "x");
+                            let minVal = value[0];
+                            let maxVal = value[1];
+                            linkedStep.input.options.range[filterIdx].min = minVal;
+                            linkedStep.input.options.range[filterIdx].max = maxVal;
+
+                            linkedStep.output = null;
+                            currentAnalysis.find(d => d.id == "x_histogram").output = null;
+                            currentAnalysis.find(d => d.id == "x_histogram_plot").output = null;
+
+                            updateView(dashboardDesc, "x_hist_view");
+
+                        });
+                    }
+
+                    var rangeYSignal = step.output.signals.find(d => d.name == "rangeY");
+                    if (rangeYSignal) {
+                        viewVega.addSignalListener("rangeY", (name, value) => {
+                            let linkedStepID = "filtered";
+
+                            if (value[0] > value[1]) {
+                                let tmp = value[0];
+                                value[0] = value[1];
+                                value[1] = tmp;
+                            }
+
+                            if (value[0] == value[1]) {
+                                value[0] = null;
+                                value[1] = null;
+                            }
+
+                            let currentAnalysis = dashboardDesc.analysis;
+                            let linkedStep = currentAnalysis.find(d => d.id == linkedStepID);
+                            let filterIdx = linkedStep.input.options.range.findIndex(d => d.attribute == "y");
+                            let minVal = value[0];
+                            let maxVal = value[1];
+                            linkedStep.input.options.range[filterIdx].min = minVal;
+                            linkedStep.input.options.range[filterIdx].max = maxVal;
+
+                            linkedStep.output = null;
+                            currentAnalysis.find(d => d.id == "x_histogram").output = null;
+                            currentAnalysis.find(d => d.id == "x_histogram_plot").output = null;
+
+                            updateView(dashboardDesc, "x_hist_view");
+
+                        });
+                    }
+                }
+            }
+		</script>
+	</body>
+</html>

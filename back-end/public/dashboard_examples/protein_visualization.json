@@ -1,0 +1,176 @@
+{
+    "analysis": [
+        {
+            "id": "3dsc_distances",
+            "service": "loadurl",
+            "input": {
+                "options": {
+                    "url": "http://localhost:8081/sample_data/3dsc_aligned_137_dist.txt",
+                    "format": "csv",
+                    "header": false,
+                    "delimiter": " "
+                }
+            },
+            "output": null
+        },
+        {
+            "id": "3dsc_mst",
+            "service": "mst",
+            "input": {
+                "data": "&3dsc_distances",
+                "options": {}
+            },
+            "output": null
+        },
+        {
+            "id": "3dsc_graph",
+            "service": "forcedirected",
+            "input": {
+                "data": {
+                    "nodes": "&info",
+                    "edges": "&3dsc_mst"
+                },
+                "options": {
+                    "width": 450,
+                    "height": 300,
+                    "color": "$subset"
+                }
+            },
+            "output": null
+        },
+        {
+            "id": "fpfh_distances",
+            "service": "loadurl",
+            "input": {
+                "options": {
+                    "url": "http://localhost:8081/sample_data/fpfh_aligned_137_dist.txt",
+                    "format": "csv",
+                    "header": false,
+                    "delimiter": " "
+                }
+            },
+            "output": null
+        },
+        {
+            "id": "fpfh_mst",
+            "service": "mst",
+            "input": {
+                "data": "&fpfh_distances",
+                "options": {}
+            },
+            "output": null
+        },
+        {
+            "id": "fpfh_graph",
+            "service": "forcedirected",
+            "input": {
+                "data": {
+                    "nodes": "&info",
+                    "edges": "&fpfh_mst"
+                },
+                "options": {
+                    "width": 450,
+                    "height": 300,
+                    "color": "$subset"
+                }
+            },
+            "output": null
+        },
+        {
+            "id": "info",
+            "service": "loadurl",
+            "input": {
+                "options": {
+                    "url": "http://localhost:8081/sample_data/pdb_info_137.csv",
+                    "format": "csv",
+                    "header": true,
+                    "delimiter": ","
+                }
+            },
+            "output": null
+        },
+        {
+            "id": "subset_counts",
+            "service": "count",
+            "input": {
+                "data": "&info",
+                "options": {
+                    "attribute": "subset",
+                    "sort": "descending"
+                }
+            },
+            "output": null
+        },
+        {
+            "id": "subset_counts_bar",
+            "service": "bar",
+            "input": {
+                "data": "&subset_counts",
+                "options": {
+                    "xAttr": "subset",
+                    "yAttr": "count",
+                    "width": 450,
+                    "height": 300,
+                    "color": "$subset"
+                }
+            },
+            "output": null
+        },
+        {
+            "id": "merged_msts",
+            "service": "mergegraphs",
+            "input": {
+                "data": ["&3dsc_mst", "&fpfh_mst"],
+                "options": {}
+            }
+        },
+        {
+            "id": "merged_graph",
+            "service": "forcedirected",
+            "input": {
+                "data": {
+                    "nodes": "&info",
+                    "edges": "&merged_msts"
+                },
+                "options": {
+                    "width": 450,
+                    "height": 300,
+                    "color": "$subset"
+                }
+            },
+            "output": null
+        }
+    ],
+    "views": [
+        {
+            "id": "pdb_info_view",
+            "title": "PDB info",
+            "stepID": "info",
+            "type": "json"
+        },
+        {
+            "id": "subset_counts_view",
+            "title": "Subset counts",
+            "stepID": "subset_counts_bar",
+            "type": "vega"
+        },
+        {
+            "id": "3dsc_graph_view",
+            "title": "3DSC graph",
+            "stepID": "3dsc_graph",
+            "type": "vega"
+        },
+        {
+            "id": "fpfh_graph_view",
+            "title": "FPFH graph",
+            "stepID": "fpfh_graph",
+            "type": "vega"
+        },
+        {
+            "id": "merged_graph_view",
+            "title": "Merged graph",
+            "stepID": "merged_graph",
+            "type": "vega"
+        }
+    ]
+}

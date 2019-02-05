@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
+		<script src="https://vega.github.io/vega/vega.min.js"></script>
+		<style>
+			.area {
+				width: 30%;
+				padding: 10px;
+				float: left;
+			}
+			#urlTextbox {
+				width: 100%;
+			}
+			.editor {
+				height: 720px;
+				width: 100%;
+			}
+			#selectedJsonEditor {
+				height: 250px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="analysisArea" class="area">
+			<h3>Analysis</h3>
+			<div id="analysisEditor" class="editor"></div>
+			<div><button onclick="run()">Run analysis</button></div>
+		</div>
+		<div id="outputAreaJson" class="area">
+			<h3>Output</h3>
+			<div id="outputEditor" class="editor"></div>
+		</div>
+		<div id="selectedOutputArea" class="area">
+			<h3>Select analysis step to show</h3>
+			<select id="stepSelect" onchange="selectStep()"></select>
+			<h3>Selected output (JSON)</h3>
+			<div id="selectedJsonEditor" class="editor"></div>
+			<h3>Selected output (Vega)</h3>
+			<div id="selectedVegaView"></div>
+		</div>
+		
+		<script>
+
+			var inputEditor = ace.edit("analysisEditor");
+			inputEditor.setTheme("ace/theme/dawn");
+			inputEditor.session.setMode("ace/mode/json");
+
+			var outputEditor = ace.edit("outputEditor");
+			outputEditor.setTheme("ace/theme/dawn");
+			outputEditor.session.setMode("ace/mode/json");
+
+			var selectedJsonEditor = ace.edit("selectedJsonEditor");
+			selectedJsonEditor.setTheme("ace/theme/dawn");
+			selectedJsonEditor.session.setMode("ace/mode/json");
+		
+			var analysisOutput = {};
+			
+			function run() {
+				// var url = document.getElementById("urlTextbox").value;
+				var url = "http://localhost:8081/analysis";
+				var analysis = inputEditor.getValue();
+				
+				fetch(url, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json; charset=utf-8",
+						"Access-Control-Allow-Origin": "*"
+					},
+					body: analysis,
+				})
+				.then(res => res.json())
+				.then(data => {
+					analysisOutput = data;
+					outputEditor.setValue(JSON.stringify(analysisOutput, null, 4), -1);
+
+					// fill step select box
+					var select = document.getElementById("stepSelect");
+					select.innerHTML = "";
+					analysisOutput.forEach(step => {
+						var option = document.createElement("option");
+						option.text = step.id;
+						option.value = step.id;
+						select.appendChild(option);
+					});
+
+					selectStep();
+
+					// // Vega output
+					// view = new vega.View(vega.parse(data))
+					// 	.renderer('svg')  			// set renderer (canvas or svg)
+					// 	.initialize('#vegaArea') 	// initialize view within parent DOM container
+					// 	.hover()             		// enable hover encode set processing
+					// 	.run();
+				});
+			}
+
+			function selectStep() {
+				var select = document.getElementById("stepSelect");
+				var selectedStepID = select.options[select.selectedIndex].value;
+				var step = analysisOutput.filter(d => d.id == selectedStepID)[0];
+
+				// fill selected output JSON
+				selectedJsonEditor.setValue(JSON.stringify(step.output, null, 4), -1);
+
+				// fill selected Vega output
+				view = new vega.View(vega.parse(step.output))
+					.renderer('svg')  					// set renderer (canvas or svg)
+					.initialize('#selectedVegaView') 	// initialize view within parent DOM container
+					.hover()             				// enable hover encode set processing
+					.run();
+			}
+		</script>
+	</body>
+</html>

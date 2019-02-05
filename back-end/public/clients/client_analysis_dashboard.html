@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
+		<script src="https://vega.github.io/vega/vega.min.js"></script>
+		<style>
+			.area30 {
+				width: 30%;
+				padding: 10px;
+				float: left;
+			}
+			.area60 {
+				width: 60%;
+				padding: 10px;
+				float: left;
+			}
+			.editor {
+				height: 720px;
+				width: 100%;
+			}
+
+			.view {
+				float: left;
+				padding: 5px;
+			}
+			.viewTitle {
+				font-family: Arial;
+			}
+			.viewBody {
+				width: 450px;
+				height: 320px;
+			}
+
+			.viewJSONArea {
+				width: 420px;
+				height: 320px;
+				float: left;
+			}
+			.viewJSONEditor {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	
+	<body>
+
+		<div id="dashboard">
+			<div id="analysisArea" class="area30">
+				<h2>Dashboard description</h2>
+				<div id="dashboardEditor" class="editor"></div>
+				<div><button onclick="runAnalysis()">Run analysis</button></div>
+			</div>
+			<div id="viewsArea" class="area60"></div>
+		</div>
+		
+		<script>
+
+			var dashboardEditor = ace.edit("dashboardEditor");
+			dashboardEditor.setTheme("ace/theme/dawn");
+			dashboardEditor.session.setMode("ace/mode/json");
+
+			function runAnalysis() {
+				var dashboardDesc = JSON.parse(dashboardEditor.getValue());
+				
+				fetch("http://localhost:8081/analysis", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json; charset=utf-8",
+						"Access-Control-Allow-Origin": "*"
+					},
+					body: JSON.stringify(dashboardDesc.analysis),
+				})
+				.then(res => res.json())
+				.then(analysisResult => {
+					updateViews(analysisResult, dashboardDesc.views);
+				});
+			}
+
+			var vegaViews = {};
+
+			function updateViews(analysisResult, views) {
+				var viewsContainer = document.getElementById("viewsArea");
+				viewsContainer.innerHTML = "";
+				vegaViews = {};
+				views.forEach(view => {
+					var step = analysisResult.filter(d => d.id == view.stepID)[0];
+
+					var viewContainer = document.createElement("div");
+					viewContainer.setAttribute("class", "view");
+					viewContainer.setAttribute("id", `view_${view.stepID}_${view.type}`);
+					viewsContainer.appendChild(viewContainer);
+
+					var viewTitle = document.createElement("h3");
+					viewTitle.innerHTML = view.title;
+					viewTitle.setAttribute("class", "viewTitle");
+					viewContainer.appendChild(viewTitle);
+
+					var viewBody = document.createElement("div");
+					viewBody.setAttribute("class", "viewBody");
+					viewBody.setAttribute("id", `viewbody_${view.stepID}_${view.type}`);
+					viewContainer.appendChild(viewBody);
+
+					if (view.type == "json") {
+						var editorDiv = document.createElement("div");
+						editorDiv.setAttribute("id", `view_${view.stepID}_${view.type}_editor`);
+						editorDiv.setAttribute("class", "viewJSONEditor");
+						viewBody.appendChild(editorDiv);
+
+						var editor = ace.edit(`view_${view.stepID}_${view.type}_editor`);
+						editor.setTheme("ace/theme/dawn");
+						editor.session.setMode("ace/mode/json");
+						editor.setValue(JSON.stringify(step.output, null, 4), -1);
+					}
+					else if (view.type == "vega") {
+						if (step.output != null) {
+							let viewVega = new vega.View(vega.parse(step.output))
+								.renderer('canvas')
+								.initialize(`#viewbody_${view.stepID}_${view.type}`)
+								.hover()
+								.run();
+							vegaViews[view.id] = viewVega;
+						}
+					}
+					else if (view.type == "control") {
+						if (step.input.options.range) {
+							let filterContainer = document.createElement("div");
+							let filters = step.input.options.range;
+							filters.forEach(f => {
+								let filterDiv = document.createElement("div");
+								filterDiv.innerHTML = `
+									<p>${f.attribute}</p>
+									<span>min:</span><input type="text" value="${f.min}" id="${step.id}_range_${f.attribute}_min"/><br/>
+									<span>max:</span><input type="text" value="${f.max}" id="${step.id}_range_${f.attribute}_max"/><br/>
+									<button onclick="applyRange('${step.id}', '${f.attribute}', '${step.id}_range_${f.attribute}_min', '${step.id}_range_${f.attribute}_max')">Apply</button>
+								`;
+								filterContainer.appendChild(filterDiv);
+							});
+							viewBody.appendChild(filterContainer);
+						}
+					}
+				});
+
+				for (viewId in vegaViews) {
+					let v = vegaViews[viewId];
+					let state = v.getState();
+					if ("rangeX" in state.signals) {
+						v.addSignalListener("rangeX", (name, value) => {
+							vegaViews["x_hist_view"].signal("rangeX", value);
+							vegaViews["x_hist_view"].run();
+						});
+					}
+					if ("rangeY" in state.signals) {
+						v.addSignalListener("rangeY", (name, value) => {
+							vegaViews["x_hist_view"].signal("rangeY", value);
+							vegaViews["x_hist_view"].run();
+						});
+					}
+				}
+			}
+
+			function applyRange2(stepID, attribute, minVal, maxVal) {
+				if (minVal >= maxVal) {
+					minVal = "null";
+					maxVal = "null";
+				}
+
+				let dashboard = JSON.parse(dashboardEditor.getValue());
+				let currentAnalysis = dashboard.analysis;
+				let step = currentAnalysis.filter(d => d.id == stepID)[0];
+				let filterIdx = step.input.options.range.findIndex(d => d.attribute == attribute);
+				// let minVal = document.getElementById(minInputID).value;
+				// let maxVal = document.getElementById(maxInputID).value;
+				step.input.options.range[filterIdx].min = minVal == "null" ? null : parseFloat(minVal);
+				step.input.options.range[filterIdx].max = maxVal == "null" ? null : parseFloat(maxVal);
+				dashboardEditor.setValue(JSON.stringify({analysis: currentAnalysis, views: dashboard.views}, null, 4), -1);
+
+				runAnalysis();
+			}
+		</script>
+	</body>
+</html>

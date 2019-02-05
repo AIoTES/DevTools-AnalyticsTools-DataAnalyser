@@ -1,0 +1,21 @@
+[
+    {
+        "service": "distmat",
+        "options": {
+            "attributes": "$attributes",
+            "distFun": "$distFun"
+        }
+    },
+    {
+        "service": "mst",
+        "options": {}
+    },
+    {
+        "service": "forcedirected",
+        "options": {
+            "width": "$width",
+            "height": "$height",
+            "color": "$color"
+        }
+    }
+]

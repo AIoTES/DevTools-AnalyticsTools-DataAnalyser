@@ -1,0 +1,28 @@
+[
+	{"name": "loadurl", "path": "./services/data_loading/loadurl", "type": "basic"},
+
+	{"name": "filter", "path": "./services/data_manipulation/filter", "type": "basic"},
+	{"name": "mutate", "path": "./services/data_manipulation/mutate", "type": "basic"},
+	
+	{"name": "summary", "path": "./services/summarization/summary", "type": "basic"},
+	{"name": "count", "path": "./services/summarization/count", "type": "basic"},
+	{"name": "histogram", "path": "./services/summarization/histogram", "type": "basic"},
+
+	{"name": "kmeans", "path": "./services/clustering/kmeans", "type": "basic"},
+
+	{"name": "lof", "path": "./services/anomaly_detection/lof", "type": "basic"},
+
+	{"name": "distmat", "path": "./services/pairwise/distmat", "type": "basic"},
+
+	{"name": "mst", "path": "./services/graph/mst", "type": "basic"},
+	{"name": "mergegraphs", "path": "./services/graph/mergegraphs", "type": "basic"},
+
+	{"name": "wordfreq", "path": "./services/text_analysis/wordfreq", "type": "basic"},
+	
+	{"name": "bar", "path": "./services/visualization/bar", "type": "basic"},
+	{"name": "bar2", "path": "./services/visualization/bar2", "type": "basic"},
+	{"name": "scatter", "path": "./services/visualization/scatter", "type": "basic"},
+	{"name": "forcedirected", "path": "./services/visualization/forcedirected", "type": "basic"},
+	{"name": "line", "path": "./services/visualization/line", "type": "basic"},
+	{"name": "wordcloud", "path": "./services/visualization/wordcloud", "type": "basic"}
+]

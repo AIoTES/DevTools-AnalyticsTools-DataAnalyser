@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
+		<script src="https://vega.github.io/vega/vega.min.js"></script>
+		<style>
+			.area {
+				width: 30%;
+				padding: 10px;
+				float: left;
+			}
+			#urlTextbox {
+				width: 100%;
+			}
+			.editor {
+				height: 530px;
+				width: 100%;
+			}
+			#outputEditor {
+				height: 720px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="inputArea" class="area">
+			<h2>Input</h2>
+			<h3>URL</h3>
+			<p><input type="text" id="urlTextbox"/></p>
+			<p>(Or select one of these:)</p>
+			<select id="serviceSelect" onchange="changeService()"></select>
+			<h3>Body</h3>
+			<div id="inputEditor" class="editor"></div>
+			<div><button onclick="run()">Run service</button></div>
+		</div>
+		<div id="outputAreaJson" class="area">
+			<h2>Output (JSON)</h2>
+			<div id="outputEditor" class="editor"></div>
+		</div>
+		<div id="outputAreaVega" class="area">
+			<h2>Output (visualization)</h2>
+			<div id="vegaArea"></div>
+		</div>
+		
+		<script>
+		
+			var services = [
+				{name: "count", url: "http://localhost:8081/count"},
+				{name: "histogram", url: "http://localhost:8081/histogram"},
+				{name: "bar_vega", url: "http://localhost:8081/bar_vega"}
+			];
+			services.forEach(service => {
+				var option = document.createElement("option");
+				option.text = service.name;
+				option.value = service.url;
+				var select = document.getElementById("serviceSelect");
+				select.appendChild(option);
+			});
+
+			function changeService() {
+				var select = document.getElementById("serviceSelect");
+				var selectedValue = select.options[select.selectedIndex].value;
+				document.getElementById("urlTextbox").value = selectedValue;
+			}
+
+			var inputEditor = ace.edit("inputEditor");
+			inputEditor.setTheme("ace/theme/dawn");
+			inputEditor.session.setMode("ace/mode/json");
+
+			var outputEditor = ace.edit("outputEditor");
+			outputEditor.setTheme("ace/theme/dawn");
+			outputEditor.session.setMode("ace/mode/json");
+		
+			function run() {
+				var url = document.getElementById("urlTextbox").value;
+				var input = inputEditor.getValue();
+				
+				fetch(url, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json; charset=utf-8",
+						"Access-Control-Allow-Origin": "*"
+					},
+					body: input,
+				})
+				.then(res => res.json())
+				.then(data => {
+					// JSON output
+					outputEditor.setValue(JSON.stringify(data, null, 4), -1);
+
+					// Vega output
+					view = new vega.View(vega.parse(data))
+						.renderer('svg')  			// set renderer (canvas or svg)
+						.initialize('#vegaArea') 	// initialize view within parent DOM container
+						.hover()             		// enable hover encode set processing
+						.run();
+				});
+			}
+		</script>
+	</body>
+</html>

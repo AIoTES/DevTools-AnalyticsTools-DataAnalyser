@@ -1,0 +1,63 @@
+{
+    "inputSchema": {
+        "title": "Bar chart input",
+        "description": "The input to the bar chart service.",
+        "type": "object",
+        "properties": {
+            "data": {
+                "type": "array",
+                "description": "The data to plot, as an array of JSON objects.",
+                "items": {
+                    "type": "object",
+                    "description": "An input data record.",
+                    "properties": {}
+                }
+            },
+            "options": {
+                "type": "object",
+                "description": "Service options.",
+                "properties": {
+                    "xAttr": {
+                        "type": "string",
+                        "description": "The name of the data attribute to use for the horizontal axis (bar labels)."
+                    },
+                    "yAttr": {
+                        "type": "string",
+                        "description": "The name of the data attribute to use for the vertical axis (bar values)."
+                    },
+                    "width": {
+                        "type": "integer",
+                        "description": "The width of the chart in pixels."
+                    },
+                    "height": {
+                        "type": "integer",
+                        "description": "The height of the chart in pixels."
+                    },
+                    "color": {
+                        "type": "string",
+                        "description": "The color of the points in the scatterplot, as an SVG color name or a #xxxxxx value. It can also start with '$' followed by the name of a categorical attribute to use for coloring the points according to it."
+                    }
+                },
+                "required": ["xAttr", "yAttr", "width", "height", "color"]
+            }
+        },
+        "required": ["data", "options"]
+    },
+    "inputExample": {
+        "data": [
+            {"label": "A", "value": 4},
+            {"label": "B", "value": 2},
+            {"label": "C", "value": 3},
+            {"label": "D", "value": 1}
+        ],
+        "options": {
+            "xAttr": "label",
+            "yAttr": "value",
+            "width": 500,
+            "height": 350,
+            "color": "steelblue"
+        }
+    },
+    "outputSchema": {},
+    "outputExample": []
+}

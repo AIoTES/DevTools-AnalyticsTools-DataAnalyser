@@ -1,0 +1,86 @@
+{
+    "analysis": [
+        {
+            "id": "raw",
+            "service": "loadurl",
+            "input": {
+                "options": {
+                    "url": "http://localhost:8081/sample_data/luminance_data.json",
+                    "format": "json"
+                }
+            },
+            "output": null
+        },
+        {
+            "id": "indexed",
+            "service": "mutate",
+            "input": {
+                "data": "&raw",
+                "options": {
+                    "index": "$rowidx"
+                }
+            },
+            "output": null
+        },
+        {
+            "id": "filtered",
+            "service": "filter",
+            "input": {
+                "data": "&indexed",
+                "options": {
+                    "range": [
+                        {
+                            "attribute": "index",
+                            "min": null,
+                            "max": 120
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "anomalies",
+            "service": "lof",
+            "input": {
+                "data": "&filtered",
+                "options": {
+                    "attributes": [
+                        "value"
+                    ],
+                    "nNeigh": 40
+                }
+            }
+        },
+        {
+            "id": "linechart",
+            "service": "line",
+            "input": {
+                "data": "&anomalies",
+                "options": {
+                    "xAttr": "index",
+                    "yAttr": "value",
+                    "width": 450,
+                    "height": 300,
+                    "color": "$anomalyLabel"
+                }
+            }
+        }
+    ],
+    "views": [
+        {
+            "title": "Input data",
+            "stepID": "indexed",
+            "type": "json"
+        },
+        {
+            "title": "Line plot",
+            "stepID": "linechart",
+            "type": "vega"
+        },
+        {
+            "title": "Filter data",
+            "stepID": "filtered",
+            "type": "control"
+        }
+    ]
+}

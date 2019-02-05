@@ -1,0 +1,28 @@
+{
+  "name": "data-analysis-server",
+  "version": "1.0.0",
+  "description": "Server for data analysis",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --exit",
+    "start": "node server.js"
+  },
+  "author": "Ilias Kalamaras",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.5.4",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.2.0",
+    "cors": "^2.8.5",
+    "csv-string": "^3.1.5",
+    "d3": "^5.7.0",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "showdown": "^1.8.6",
+    "showdown-math": "0.0.4",
+    "tmp": "0.0.33"
+  }
+}

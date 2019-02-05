@@ -1,0 +1,26 @@
+{
+    "inputSchema": {
+        "title": "Word frequency service input",
+        "description": "The input to the word frequency service.",
+        "type": "object",
+        "properties": {
+            "data": {
+                "type": "string",
+                "description": "The text to analyze."
+            },
+            "options": {
+                "type": "object",
+                "description": "Service options.",
+                "properties": {},
+                "required": []
+            }
+        },
+        "required": ["data", "options"]
+    },
+    "inputExample": {
+        "data": "For the most wild, yet most homely narrative which I am about to pen, I neither expect nor solicit belief. Mad indeed would I be to expect it, in a case where my very senses reject their own evidence. Yet, mad am I not—and very surely do I not dream. But tomorrow I die, and today I would unburthen my soul. My immediate purpose is to place before the world, plainly, succinctly, and without comment, a series of mere household events. In their consequences, these events have terrified — have tortured — have destroyed me. Yet I will not attempt to expound them. To me, they have presented little but Horror — to many they will seem less terrible than barroques. Hereafter, perhaps, some intellect may be found which will reduce my phantasm to the common-place — some intellect more calm, more logical, and far less excitable than my own, which will perceive, in the circumstances I detail with awe, nothing more than an ordinary succession of very natural causes and effects.",
+        "options": {}
+    },
+    "outputSchema": {},
+    "outputExample": []
+}

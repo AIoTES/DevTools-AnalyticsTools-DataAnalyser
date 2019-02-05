@@ -1,0 +1,122 @@
+{
+    "inputSchema": {
+        "title": "Force-directed graph input",
+        "description": "The input to the force-directed graph service.",
+        "type": "object",
+        "properties": {
+            "data": {
+                "type": "object",
+                "properties": {
+                    "nodes": {
+                        "type": "array",
+                        "description": "The set of nodes of the tree.",
+                        "items": {
+                            "type": "object",
+                            "description": "A node of the tree.",
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "description": "The node ID"
+                                }
+                            },
+                            "required": []
+                        }
+                    },
+                    "edges": {
+                        "type": "array",
+                        "description": "The set of edges of the tree.",
+                        "items": {
+                            "type": "object",
+                            "description": "An edge of the tree.",
+                            "properties": {
+                                "source": {
+                                    "type": "integer",
+                                    "description": "The ID of the source node"
+                                },
+                                "target": {
+                                    "type": "integer",
+                                    "description": "The ID of the target node"
+                                }
+                            },
+                            "required": ["source", "target"]
+                        }
+                    }
+                }
+            },
+            "options": {
+                "type": "object",
+                "description": "Service options.",
+                "properties": {
+                    "width": {
+                        "type": "integer",
+                        "description": "The width of the chart in pixels."
+                    },
+                    "height": {
+                        "type": "integer",
+                        "description": "The height of the chart in pixels."
+                    },
+                    "color": {
+                        "type": "string",
+                        "description": "The color of the nodes, as an SVG color name or a #xxxxxx value."
+                    }
+                },
+                "required": ["width", "height", "color"]
+            }
+        },
+        "required": ["data", "options"]
+    },
+    "inputExample": {
+        "data": {
+            "nodes": [
+                {"id": 0},
+                {"id": 1},
+                {"id": 2},
+                {"id": 3},
+                {"id": 4},
+                {"id": 5},
+                {"id": 6},
+                {"id": 7},
+                {"id": 8},
+                {"id": 9},
+                {"id": 10},
+                {"id": 11},
+                {"id": 12},
+                {"id": 13},
+                {"id": 14},
+                {"id": 15},
+                {"id": 16},
+                {"id": 17},
+                {"id": 18},
+                {"id": 19}
+            ],
+            "edges": [
+                {"source": 2, "target": 0, "value": 0.05113091367677204},
+                {"source": 5, "target": 2, "value": 0.06731171556616558},
+                {"source": 6, "target": 2, "value": 0.0002908327657925086},
+                {"source": 4, "target": 0, "value": 0.00011852054609592316},
+                {"source": 7, "target": 5, "value": 0.000009419952041882645},
+                {"source": 8, "target": 7, "value": 0.029263595039587705},
+                {"source": 9, "target": 8, "value": 0.01571542351842038},
+                {"source": 1, "target": 6, "value": 3.9268628766951896e-7},
+                {"source": 3, "target": 1, "value": 0.010545642410650423},
+                {"source": 15, "target": 7, "value": 3.9109262426109467e-13},
+                {"source": 11, "target": 15, "value": 0.00004347178144494168},
+                {"source": 17, "target": 11, "value": 2.0174854047454615e-7},
+                {"source": 12, "target": 17, "value": 0.10131181067864767},
+                {"source": 19, "target": 12, "value": 0.00011127158481999625},
+                {"source": 13, "target": 12, "value": 0.00003490753487752978},
+                {"source": 14, "target": 19, "value": 0.00003104042166837136},
+                {"source": 10, "target": 14, "value": 0.040048668765867164},
+                {"source": 18, "target": 10, "value": 0.0003374717145231001},
+                {"source": 16, "target": 19, "value": 1.63140394842697e-9}
+            ]
+        },
+        "options": {
+            "width": 500,
+            "height": 500,
+            "color": "steelblue"
+        }
+    },
+    "outputSchema": {},
+    "outputExample": {}
+}

@@ -1,0 +1,56 @@
+{
+    "analysis": [
+        {
+            "id": "raw",
+            "service": "loadurl",
+            "input": {
+                "options": {
+                    "url": "http://localhost:8081/sample_data/flow_cytometry_sample.csv",
+                    "format": "csv",
+                    "header": true,
+                    "delimiter": ","
+                }
+            }
+        },
+        {
+            "id": "scatterplot",
+            "service": "scatter",
+            "input": {
+                "data": "&raw",
+                "options": {
+                    "xAttr": "FSC-A-",
+                    "yAttr": "SSC-A-",
+                    "width": 400,
+                    "height": 300,
+                    "color": "$clusterLabel"
+                }
+            }
+        },
+        {
+            "id": "clustered",
+            "service": "kmeans",
+            "input": {
+                "data": "&raw",
+                "options": {
+                    "attributes": ["FSC-A-", "SSC-A-"],
+                    "nClusters": 4
+                }
+            },
+            "output": null
+        }
+    ],
+    "views": [
+        {
+            "id": "raw_data_view",
+            "title": "Raw data",
+            "stepID": "raw",
+            "type": "json"
+        },
+        {
+            "id": "scatterplot_view",
+            "title": "Scatterplot",
+            "stepID": "scatterplot",
+            "type": "vega"
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
+		<style>
+			iframe {
+				border: none;
+			}
+			#urlTextbox {
+				width: 400px;
+			}
+			#inputEditor {
+				height: 400px;
+				width: 500px;
+			}
+			#inputArea {
+				float: left;
+			}
+			#outputArea {
+				float: left;
+				padding: 10px;
+			}
+			#outputEditor {
+				height: 500px;
+				width: 600px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="inputArea">
+			<p>URL</p>
+			<p><input type="text" id="urlTextbox"/></p>
+			<p>Input</p>
+			<div id="inputEditor"></div>
+			<div><button onclick="run()">Run service</button></div>
+		</div>
+		<div id="outputArea">
+			<p>Output</p>
+			<iframe id="outputFrame" width="800" height="600" style="display: none"></iframe>
+			<div id="outputEditor" style="display: none"></div>
+		</div>
+		
+		<script>
+		
+			var inputEditor = ace.edit("inputEditor");
+			inputEditor.setTheme("ace/theme/dawn");
+			inputEditor.session.setMode("ace/mode/json");
+
+			var outputEditor = ace.edit("outputEditor");
+			outputEditor.setTheme("ace/theme/dawn");
+			outputEditor.session.setMode("ace/mode/json");
+		
+			function run() {
+				var url = document.getElementById("urlTextbox").value;
+				var input = inputEditor.getValue();
+				
+				fetch(url, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json; charset=utf-8",
+						"Access-Control-Allow-Origin": "*"
+					},
+					body: input,
+				})
+				.then(res => {
+					var contentType = res.headers.get("Content-Type");
+					if (contentType.includes("application/json")) {
+						res.json().then(data => {
+							document.getElementById("outputFrame").style.display = "none";
+							document.getElementById("outputEditor").style.display = "block";
+							outputEditor.setValue(JSON.stringify(data, null, 4), -1);
+						});
+					}
+					else if (contentType.includes("text/html")) {
+						res.text().then(data => {
+							document.getElementById("outputFrame").style.display = "block";
+							document.getElementById("outputEditor").style.display = "none";
+							document.getElementById("outputFrame").setAttribute("srcdoc", data);
+						});
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
