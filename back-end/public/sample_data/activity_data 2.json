@@ -1,0 +1,2888 @@
+[{
+	"deviceID": "1234567890123456",
+	"userID": "3089",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20170915064522"
+},
+{
+	"deviceID": "1234567890123456",
+	"userID": "3089",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20170915064533"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107173024"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171107173047"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107173058"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107173225"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107173528"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107173543"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107173621"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107173649"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171107173733"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107173812"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107173817"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171107174718"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107174852"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171107174904"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "outdoor",
+	"activity": "Outdoor",
+	"timestamp": "20171107174959"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171107175013"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "outdoor",
+	"activity": "Outdoor",
+	"timestamp": "20171107175059"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171107175106"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107175140"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107175209"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107175214"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107175235"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107175253"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107175309"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107175318"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107175324"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107175333"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107175404"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171107175432"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171108064733"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171108064737"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171108064759"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171108064849"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171108064858"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171108064926"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "outdoor",
+	"activity": "Outdoor",
+	"timestamp": "20171108064956"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171108065012"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "outdoor",
+	"activity": "Outdoor",
+	"timestamp": "20171108065048"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171108065320"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171108065407"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171108065448"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171108065552"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109142918"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171109142926"
+},
+{
+	"deviceID": "aa3538ac110d6566",
+	"userID": "2105",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109143029"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107100142"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171107100221"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171107100254"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107100305"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171107100845"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107100910"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "outdoor",
+	"activity": "Outdoor",
+	"timestamp": "20171107101259"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107101329"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "outdoor",
+	"activity": "Outdoor",
+	"timestamp": "20171107101644"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171107101729"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "outdoor",
+	"activity": "Outdoor",
+	"timestamp": "20171107101813"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171108095836"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171108103641"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171108103648"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171108104324"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171108104331"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171108104706"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171108104712"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171108104820"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108104854"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108104859"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108104936"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108105005"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108105554"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108105600"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108105830"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108105835"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108105856"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108105901"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108105911"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108105917"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108110006"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108110021"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108110056"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108110102"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108110107"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108110130"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108110145"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108110151"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111041"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111046"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111240"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111247"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111322"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111332"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111507"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111602"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111625"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111631"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111655"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111700"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111705"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111850"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108111906"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108112001"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171108112006"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144609"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144610"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144710"
+},
+{
+	"deviceID": "8e4ebff48b18ed27",
+	"userID": "2110",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171109144813"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110101333"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110101401"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110101413"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110101449"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110101453"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110101647"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110101651"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110101740"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110101744"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110101915"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110102001"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110103012"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103020"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110103024"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103030"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110103037"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103046"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103055"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110103115"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103121"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171110103151"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103157"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103206"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103215"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110103236"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103242"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171110103411"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103420"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103446"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110103455"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103526"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110103535"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103556"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110103610"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103706"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110103745"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171110103830"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110103852"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110103907"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171110103925"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110103933"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171110103955"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110104001"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110104010"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110104017"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110104031"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171110104040"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110104201"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171110104212"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110104220"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110104232"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110104238"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110104846"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bedroom",
+	"activity": "null",
+	"timestamp": "20171110104901"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110104908"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110104912"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110105021"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110105027"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110105052"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110105105"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110105122"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110105446"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110105452"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110105701"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110105710"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110105725"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110105740"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110105826"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110105835"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110105841"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110105912"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110105928"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110105932"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110045"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110110052"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110113"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110110121"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110127"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110110135"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110146"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110110152"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110201"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110110208"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110242"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110110255"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110259"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110110305"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110332"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110110340"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110456"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110110502"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110612"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110110622"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110651"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110110657"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110110830"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110836"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110110909"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110110915"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111110"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111114"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111145"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111151"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111200"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111205"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111227"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111231"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111257"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111305"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111311"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111320"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111337"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111342"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111357"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111406"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111413"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111421"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111427"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111446"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111452"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111501"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111507"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111522"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111528"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111536"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111553"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111601"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111607"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111616"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111622"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111627"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111651"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111657"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111703"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110111716"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110111722"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110112243"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171110112249"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110112258"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171113081037"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171113081057"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171113081233"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171113081241"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "bathroom",
+	"activity": "null",
+	"timestamp": "20171113081317"
+},
+{
+	"deviceID": "6475943ad4070621",
+	"userID": "2103",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171113081329"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110093925"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110093935"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110093939"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110093951"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110093956"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110094000"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110094019"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110094024"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110094028"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110094124"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110094128"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110094138"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110094144"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110094218"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110094225"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110094237"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110094243"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110094253"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110094257"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110094318"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110094339"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110094409"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110094418"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110094443"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "living_room",
+	"activity": "null",
+	"timestamp": "20171110094449"
+},
+{
+	"deviceID": "b01c14923a76775c",
+	"userID": "2111",
+	"username": "",
+	"room": "kitchen",
+	"activity": "null",
+	"timestamp": "20171110094613"
+}]
