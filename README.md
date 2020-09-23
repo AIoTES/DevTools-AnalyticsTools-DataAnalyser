@@ -36,4 +36,4 @@ You can check the [DT-AIOTES_docker](https://git.activageproject.eu/Deployment/D
 
 ## License
 
-EUPL 1.2
+EUPL v1.2
