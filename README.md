@@ -36,4 +36,4 @@ You can check the [DT-AIOTES_docker](https://git.activageproject.eu/Deployment/D
 
 ## License
 
-EUPL v1.2
+Copyright 2020 CERTH/ITI Visual Analytics Lab. This software is licensed under EUPL v1.2, check [LICENSE](./LICENSE) for more.
